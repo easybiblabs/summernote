@@ -6,7 +6,7 @@
  * Copyright 2013 Alan Hong. and outher contributors
  * summernote may be freely distributed under the MIT license./
  *
- * Date: 2014-06-30T11:55Z
+ * Date: 2014-07-09T15:47Z
  */
 (function (factory) {
   /* global define */
@@ -3192,7 +3192,7 @@
       style: function (lang, options) {
         var items = options.styleTags.reduce(function (memo, v) {
           var label = lang.style[v === 'p' ? 'normal' : v];
-          return memo + '<li><a data-event="formatBlock" href="#" data-value="' + v + '">' +
+          return memo + '<li><a data-event="formatBlock" href="javascript:void(0)" data-value="' + v + '">' +
                    (
                      (v === 'p' || v === 'pre') ? label :
                      '<' + v + '>' + label + '</' + v + '>'
@@ -3207,7 +3207,7 @@
       },
       fontname: function (lang, options) {
         var items = options.fontNames.reduce(function (memo, v) {
-          return memo + '<li><a data-event="fontName" href="#" data-value="' + v + '">' +
+          return memo + '<li><a data-event="fontName" href="javascript:void(0)" data-value="' + v + '">' +
                           '<i class="fa fa-check icon-ok"></i> ' + v +
                         '</a></li>';
         }, '');
@@ -3221,7 +3221,7 @@
       },
       fontsize: function (lang, options) {
         var items = options.fontSizes.reduce(function (memo, v) {
-          return memo + '<li><a data-event="fontSize" href="#" data-value="' + v + '">' +
+          return memo + '<li><a data-event="fontSize" href="javascript:void(0)" data-value="' + v + '">' +
                           '<i class="fa fa-check icon-ok"></i> ' + v +
                         '</a></li>';
         }, '');
@@ -3366,7 +3366,7 @@
       },
       height: function (lang, options) {
         var items = options.lineHeights.reduce(function (memo, v) {
-          return memo + '<li><a data-event="lineHeight" href="#" data-value="' + parseFloat(v) + '">' +
+          return memo + '<li><a data-event="lineHeight" href="javascript:void(0)" data-value="' + parseFloat(v) + '">' +
                           '<i class="fa fa-check icon-ok"></i> ' + v +
                         '</a></li>';
         }, '');
@@ -3602,7 +3602,7 @@
                    '<input class="note-image-input" type="file" name="files" accept="image/*" />' +
                    '<h5>' + lang.image.url + '</h5>' +
                    '<input class="note-image-url form-control span12" type="text" />';
-        var footer = '<button href="#" class="btn btn-primary note-image-btn disabled" disabled>' + lang.image.insert + '</button>';
+        var footer = '<button href="javascript:void(0)" class="btn btn-primary note-image-btn disabled" disabled>' + lang.image.insert + '</button>';
         return tplDialog('note-image-dialog', lang.image.insert, body, footer);
       };
 
@@ -3622,7 +3622,7 @@
                        '</label>' +
                      '</div>' : ''
                    );
-        var footer = '<button href="#" class="btn btn-primary note-link-btn disabled" disabled>' + lang.link.insert + '</button>';
+        var footer = '<button href="javascript:void(0)" class="btn btn-primary note-link-btn disabled" disabled>' + lang.link.insert + '</button>';
         return tplDialog('note-link-dialog', lang.link.insert, body, footer);
       };
 
@@ -3631,7 +3631,7 @@
                      '<label>' + lang.video.url + '</label>&nbsp;<small class="text-muted">' + lang.video.providers + '</small>' +
                      '<input class="note-video-url form-control span12" type="text" />' +
                    '</div>';
-        var footer = '<button href="#" class="btn btn-primary note-video-btn disabled" disabled>' + lang.video.insert + '</button>';
+        var footer = '<button href="javascript:void(0)" class="btn btn-primary note-video-btn disabled" disabled>' + lang.video.insert + '</button>';
         return tplDialog('note-video-dialog', lang.video.insert, body, footer);
       };
 
